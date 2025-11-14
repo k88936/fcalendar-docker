@@ -1,0 +1,25 @@
+services:
+  web:
+    image: kvtodev/fcalendar:backend
+    container_name: fcalendar_dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DJANGO_SETTINGS_MODULE=Fcalendar_backend.settings.settings_dev
+      - DB_HOST=db
+      - DB_NAME=fcalendar
+      - DB_USER=postgres
+      - DB_PASSWORD=123456
+      - DB_PORT=5432
+
+  db:
+    image: postgres:15
+    container_name: db
+    environment:
+      POSTGRES_DB: fcalendar
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - ./data:/var/lib/postgresql/data
