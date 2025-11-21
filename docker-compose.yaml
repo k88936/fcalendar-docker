@@ -1,7 +1,7 @@
 services:
   web:
-    image: kvtodev/fcalendar:backend
-    container_name: fcalendar_dev
+    image: kvtodev/fcalendar:playground
+    container_name: fcalendar
     ports:
       - "8000:8000"
     depends_on:
@@ -13,6 +13,7 @@ services:
       - DB_USER=postgres
       - DB_PASSWORD=123456
       - DB_PORT=5432
+      - SECRET_KEY=k3it2tcb16gtacj83&06d4h
 
   db:
     image: postgres:15

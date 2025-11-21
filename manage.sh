@@ -1,1 +1,1 @@
-docker exec fcalendar_dev python manage.py $@
+docker exec fcalendar python manage.py $@
