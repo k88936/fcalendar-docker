@@ -1,6 +1,6 @@
 services:
   web:
-    image: kvtodev/fcalendar:playground
+    image: kvtodev/fcalendar:backend-playground
     container_name: fcalendar
     ports:
       - "8000:8000"
@@ -14,6 +14,8 @@ services:
       - DB_PASSWORD=123456
       - DB_PORT=5432
       - SECRET_KEY=k3it2tcb16gtacj83&06d4h
+    volumes:
+      - ./media:/app/media
 
   db:
     image: postgres:15
