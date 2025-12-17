@@ -1,6 +1,6 @@
 services:
   web:
-    image: kvtodev/fcalendar:backend-playground
+    image: kvtodev/fcalendar:dev
     container_name: fcalendar
     ports:
       - "8000:8000"
