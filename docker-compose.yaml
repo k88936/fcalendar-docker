@@ -14,6 +14,8 @@ services:
       - DB_PASSWORD=123456
       - DB_PORT=5432
       - SECRET_KEY=k3it2tcb16gtacj83&06d4h
+      - AMAP_API_KEY=3c224420b5589a8267dbf12fed5db087
+      - MOONSHOT_API_KEY=sk-f6iWaYictJnifDoiLEYCvEvKsdrEKYFOzxYthpjgYyAfvqhl
     volumes:
       - ./media:/app/media
 
